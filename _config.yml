@@ -1,11 +1,11 @@
 # Site settings
 author: Ting Chung
-title: 
+title: Creating my adopt pet CLI
 header-img: img/home-bg.png
 email: tchung682@gmail.com
 copyright_name: Ting Chung
 description: > # this means to ignore newlines until "baseurl:"
-  
+  My journey with adopt pet CLI
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  ting682
