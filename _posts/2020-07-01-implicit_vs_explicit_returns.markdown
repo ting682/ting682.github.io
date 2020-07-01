@@ -19,7 +19,7 @@ def square(number)
 end
 ```
 
-In this instance, we’ve implicitly returned the result of variable x. Notice that the method did not return any of the string answers because Ruby will return only the last evaluated statement. What if a programmer wanted to make some changes to the method: 
+In this instance, we’ve implicitly returned the result of variable x. Notice that the method did not return any of the string answers because Ruby will return only the last evaluated statement. What if a different programmer wanted to make some changes to the method: 
 
 ```
 def square(number)	
