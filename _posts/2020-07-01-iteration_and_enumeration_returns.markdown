@@ -87,7 +87,7 @@ This shows the power of using map. Now let’s say that the store manager only w
 
 ```
 def grocery_checkout(customer)
-  puts "We have removed bananas from the cart due to being rotten."
+  puts "Bananas have been removed from the cart due to being rotten."
 	customer.all_checkout_items.select do |item|
 	  item != "banana"
 
@@ -98,7 +98,7 @@ end
 
 Here will be our return and output:
 
-We have removed bananas from the cart due to being rotten.
+Bananas have been removed from the cart due to being rotten.
 
  => ["apple", "orange", "watermelon"]
  
