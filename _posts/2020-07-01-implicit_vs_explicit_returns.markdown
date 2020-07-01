@@ -40,7 +40,9 @@ end
 Let's see what happens with the output if we run square(3):
 
 that number works!
+
 number squared is 9
+
  => nil 
 
 Notice that now we see the text because we used puts as the method, but what if the original programmer’s intent was to return x and use that return value to process other data? This method would suddenly be broken because the return value of puts is nil. Let’s go back in time and say the original programmer decided to explicitly return x.
@@ -74,7 +76,9 @@ end
 Let's take a look at the output of running square(3):
 
 that number works!
+
 number squared is 9
+
  => 9 
 
 Viola! This programmer understood to return the correct value of x; however, this somewhat breaks Ruby convention in some ways because we’re not simple, elegant, and concise anymore. 
