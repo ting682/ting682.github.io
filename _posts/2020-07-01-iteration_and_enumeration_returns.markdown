@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Iteration and enumeration returns"
-date:       2020-07-01 18:09:08 +0000
+date:       2020-07-01 14:09:09 -0400
 permalink:  iteration_and_enumeration_returns
 ---
 
@@ -58,20 +58,21 @@ checkout.grocery_checkout(customer)
 After we run grocery_checkout, we get the following return and output:
 
 We have been notified that bananas are rotten. Please remove this from your cart.
+
  => ["apple", "banana", "orange", "watermelon"]
  
 For grocery_checkout, we used the each method to both process each array element and output the notification to the customer. We also returned the customer’s checkout cart. With this message, the customer would naturally take action to remove the banana. So now, what if the store manager says we want to substitute plantains every time we see a banana. This is where we use the map method. Here is what the revised method would look like:
 
 ```
 def grocery_checkout(customer)
-		customer.all_checkout_items.map do |item|
-				if item == "banana"
-						puts "We have been notified that bananas are rotten. We have replaced the item with plantains."
-						item = "plantains"
-				else
-						item
-				end
-		end
+  customer.all_checkout_items.map do |item|
+    if item == "banana"
+			  puts "We have been notified that bananas are rotten. We have replaced the item with plantains."
+	      item = "plantains"
+	  else
+			  item
+	  end
+	end
 end
 ```
 
@@ -79,17 +80,18 @@ end
 Notice that the map method alters the return array. Now let’s see the return and output:
 
 We have been notified that bananas are rotten. We have replaced the item with plantains.
+
  => ["apple", "plantains", "orange", "watermelon"]
  
 This shows the power of using map. Now let’s say that the store manager only wants the banana to be removed from the cart. We can use the select method. Our code will look like this:
 
 ```
 def grocery_checkout(customer)
-		puts "We have removed bananas from the cart due to being rotten."
-		customer.all_checkout_items.select do |item|
-				item != "banana"
+  puts "We have removed bananas from the cart due to being rotten."
+	customer.all_checkout_items.select do |item|
+	  item != "banana"
 
-		end
+	end
 
 end
 ```
@@ -97,17 +99,18 @@ end
 Here will be our return and output:
 
 We have removed bananas from the cart due to being rotten.
+
  => ["apple", "orange", "watermelon"]
  
 Finally, here is what we would do if the store manager said he simply wants a program to return the banana if it is in the shopping cart. We can call this method banana_finder.
 
 ```
-    def banana_finder(customer)
-        customer.all_checkout_items.find do |item|
-            item == "banana"
+def banana_finder(customer)
+    customer.all_checkout_items.find do |item|
+        item == "banana"
             
-        end
     end
+end
 ```
 
 Running checkout.banana_finder(customer) will result in the following:
