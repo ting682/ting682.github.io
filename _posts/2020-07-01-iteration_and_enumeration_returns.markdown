@@ -64,16 +64,16 @@ We have been notified that bananas are rotten. Please remove this from your cart
 For grocery_checkout, we used the each method to both process each array element and output the notification to the customer. We also returned the customer’s checkout cart. With this message, the customer would naturally take action to remove the banana. So now, what if the store manager says we want to substitute plantains every time we see a banana. This is where we use the map method. Here is what the revised method would look like:
 
 ```
-def grocery_checkout(customer)
-    customer.all_checkout_items.map do |item|
-        if item == "banana"
-		        puts "We have been notified that bananas are rotten. We have replaced the item with plantains."
-				    item = "plantains"
-        else
-            item
+    def grocery_checkout(customer)
+        customer.all_checkout_items.map do |item|
+            if item == "banana"
+                puts "We have been notified that bananas are rotten. We have replaced the item with plantains."
+                item = "plantains"
+            else
+                item
+            end
         end
     end
-end
 ```
 
  
