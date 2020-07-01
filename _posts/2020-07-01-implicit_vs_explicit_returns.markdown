@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "Implicit vs explicit returns"
-date:       2020-07-01 15:29:29 +0000
+date:       2020-07-01 11:29:30 -0400
 permalink:  implicit_vs_explicit_returns
 ---
 
 
-My understanding of the Ruby culture is we want simple, elegant, and concise code. With this culture, some programmers that are new to Ruby (like me) will get confused with a topic that is at the heart of the Ruby culture. This topic is the difference between implicit and explicit returns. In Ruby, every method provides a return value. Ruby will return the last evaluated statement. Let’s take this example of this method called squareable_number:
+My understanding of the Ruby culture is we want simple, elegant, and concise code. With this culture, some programmers that are new to Ruby (like me) will get confused with a topic that is at the heart of the Ruby culture. This topic is the difference between implicit and explicit returns. In Ruby, every method provides a return value. Ruby will return the last evaluated statement. Let’s take this example of this method called square:
 
 ```
 def square(number)	
