@@ -108,7 +108,6 @@ Finally, here is what we would do if the store manager said he simply wants a pr
 def banana_finder(customer)
     customer.all_checkout_items.find do |item|
         item == "banana"
-            
     end
 end
 ```
