@@ -19,6 +19,10 @@ def square(number)
 end
 ```
 
+Let's take a look at the output of square(3):
+
+ => 9 
+
 In this instance, we’ve implicitly returned the result of variable x. Notice that the method did not return any of the string answers because Ruby will return only the last evaluated statement. What if a different programmer wanted to make some changes to the method: 
 
 ```
@@ -33,7 +37,13 @@ def square(number)
 end
 ```
 
-Notice that now we see the text, but if the original programmer’s intent was to return x, this method would suddenly be broken because the return value of puts is nil. Let’s go back in time and say the original programmer decided to explicitly return x.
+Let's see what happens with the output if we run square(3):
+
+that number works!
+number squared is 9
+ => nil 
+
+Notice that now we see the text because we used puts as the method, but what if the original programmer’s intent was to return x and use that return value to process other data? This method would suddenly be broken because the return value of puts is nil. Let’s go back in time and say the original programmer decided to explicitly return x.
 
 ```
 def square(number)	
@@ -60,6 +70,12 @@ def square(number)
     return x
 end
 ```
+
+Let's take a look at the output of running square(3):
+
+that number works!
+number squared is 9
+ => 9 
 
 Viola! This programmer understood to return the correct value of x; however, this somewhat breaks Ruby convention in some ways because we’re not simple, elegant, and concise anymore. 
 On one hand, the original programmer was simply following the Ruby convention of returning the last evaluated statement. This is by no means illegal. On the other hand, the new programmer did not understand the original intent. In the end, it is both important to be unambiguous AND be simple, elegant, and concise. Here is the problem. If we have thousands of lines of code looking like this:
