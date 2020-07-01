@@ -65,14 +65,14 @@ For grocery_checkout, we used the each method to both process each array element
 
 ```
 def grocery_checkout(customer)
-  customer.all_checkout_items.map do |item|
-    if item == "banana"
-			  puts "We have been notified that bananas are rotten. We have replaced the item with plantains."
-	      item = "plantains"
-	  else
-			  item
-	  end
-	end
+    customer.all_checkout_items.map do |item|
+        if item == "banana"
+		        puts "We have been notified that bananas are rotten. We have replaced the item with plantains."
+				    item = "plantains"
+        else
+            item
+        end
+    end
 end
 ```
 
