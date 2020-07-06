@@ -116,7 +116,7 @@ Running checkout.banana_finder(customer) will result in the following:
 
 => "banana"
 
-So what if the customer has multiple grocery items that are banana? In this case, the find method only returns the first match. All these methods have different uses depending on the 
+So what if the customer has multiple grocery items that are banana? In this case, the find method only returns the first match. All these methods have different uses depending on the needs of the application.
 
 
 
